@@ -47,7 +47,7 @@ const VillageState = class VillageState {
     }
   }
 }
-
+// This function takes a state , a robot which will do the task and a memory to track itself
 function runRobot(state, robot, memory) {
   for (let turn = 0; ; turn++) {
     if (state.parcels.length == 0) {
@@ -57,9 +57,10 @@ function runRobot(state, robot, memory) {
     let action = robot(state, memory);
     state = state.move(action.direction);
     memory = action.memory;
-    console.log(`Moved to ${action.direction}`);
+    console.log(`Moved to ${action.direction} `);
   }
 }
+
 
 function randomPick(array) {
   let choice = Math.floor(Math.random() * array.length);
@@ -72,6 +73,25 @@ function randomPick(array) {
 function randomRobot(state) {
   return { direction: randomPick(roadGraph[state.place]) };
 }
+
+// Second robot is route robot 
+
+var mailRoute = [
+  "Alice's House", "Cabin", "Alice's House", "Bob's House",
+  "Town Hall", "Daria's House", "Ernie's House",
+  "Grete's House", "Shop", "Grete's House", "Farm",
+  "Marketplace", "Post Office"
+];
+
+function routeRobot(state, memory) {
+  if (memory.length == 0) {
+    memory = mailRoute;
+  }
+  return { direction: memory[0], memory: memory.slice(1) };
+}
+
+
+
 
 VillageState.random = function (parcelCount) {
   let parcels = [];
@@ -100,6 +120,9 @@ function routeRobot(state, memory) {
   return { direction: memory[0], memory: memory.slice(1) };
 }
 
+
+// Third Robot is Goal oriented robot
+
 function findRoute(graph, from, to) {
   let work = [{ at: from, route: [] }];
   for (let i = 0; i < work.length; i++) {
@@ -125,4 +148,4 @@ function goalOrientedRobot({ place, parcels }, route) {
   return { direction: route[0], memory: route.slice(1) };
 }
 
-runRobot(VillageState.random(10), routeRobot, [])
+runRobot(VillageState.random(10),randomRobot, [])
