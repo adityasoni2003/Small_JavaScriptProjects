@@ -1,7 +1,7 @@
 
 
 
-var roads = [
+const roads = [
   "Alice's House-Bob's House", "Alice's House-Cabin",
   "Alice's House-Post Office", "Bob's House-Town Hall",
   "Daria's House-Ernie's House", "Daria's House-Town Hall",
@@ -27,9 +27,9 @@ function buildGraph(edges) {
   return graph;
 }
 
-var roadGraph = buildGraph(roads);
+let roadGraph = buildGraph(roads);
 
-var VillageState = class VillageState {
+const VillageState = class VillageState {
   constructor(place, parcels) {
     this.place = place;
     this.parcels = parcels;
@@ -65,12 +65,15 @@ function randomPick(array) {
   let choice = Math.floor(Math.random() * array.length);
   return array[choice];
 }
+// In this programme we have Three types of robot 
+
+//First one is Random Robot 
 
 function randomRobot(state) {
   return { direction: randomPick(roadGraph[state.place]) };
 }
 
-VillageState.random = function (parcelCount = 5) {
+VillageState.random = function (parcelCount) {
   let parcels = [];
   for (let i = 0; i < parcelCount; i++) {
     let address = randomPick(Object.keys(roadGraph));
@@ -122,4 +125,4 @@ function goalOrientedRobot({ place, parcels }, route) {
   return { direction: route[0], memory: route.slice(1) };
 }
 
-runRobot(VillageState.random(), goalOrientedRobot, [])
+runRobot(VillageState.random(10), routeRobot, [])
