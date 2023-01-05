@@ -1,12 +1,17 @@
-:root{
+:root {
     margin: 0;
-    background-image: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+
+    background-image: linear-gradient(135deg, #FCCF31 10%, #F55555 100%);
+    background-repeat: no-repeat;
 }
-form{
-    display:inline-block;
+
+form {
+    display: inline-block;
+    height: 100vh;
 }
-form>label{
+
+form>label {
     padding-left: 60px;
     display: inline-block;
-    
+
 }
