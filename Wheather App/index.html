@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main class="container">
+            <input list="cities" type="search" id="search" name="search" placeholder="Search For City" autocomplete="off">
+            <datalist id ="cities">
+            </datalist>
+            <article id="current-forecast">
+                <h1 id="city">City</h1>
+                <h4 id="temp">--</h4>
+                <p id="des">--</p>
+                <h4 id="hl">H L</h4>
+            </article>
+            <article id="hourly-forecast">
+                <h1 >Hourly Forecast</h1>
+                <section class="hourly-container">
+                <section>
+                    <h2 class="now" >--</h2>
+                    <img class="icon" src="" alt="">Icon
+                    <h4 class="temp">Temp.</h4>
+                </section>
+                </section>
+
+        </article>
+        
+        
+        <article id="five-days-forecast">
+            <h1>5 Day Forecast</h1>
+        <section class="five-forecast">
+            <article class="day-wise">
+                <h2 class="data">Today</h2>
+                <img src="" alt="" class="icon">
+                <h4 class="low">Low</h4>
+                <h4 class="high">High</h4>
+
+            </article>
+            <article class="day-wise">
+                <h2 class="data">Monday</h2>
+                <img src="" alt="" class="icon">
+                <h4 class="low">--</h4>
+                <h4 class="high">--</h4>
+
+            </article>
+            
+            
+        </section>
+    </article>
+    <article id="feels-like">
+        <h1>Feels Like</h1>
+        <h4 class="feels-like-temp">--</h4>
+    </article>
+    
+    
+    <article id="humidity">
+        <h1>Humidity</h1>
+        <h4 class="humidity-value">--</h4>
+    </article>
+    
+    
+    
+</main>
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
