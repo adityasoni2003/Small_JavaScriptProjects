@@ -1,0 +1,19 @@
+{
+  "name": "qoute-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "A_Robot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityasoni2003/Small_JavaScriptProjects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adityasoni2003/Small_JavaScriptProjects/issues"
+  },
+  "homepage": "https://github.com/adityasoni2003/Small_JavaScriptProjects#readme"
+}
