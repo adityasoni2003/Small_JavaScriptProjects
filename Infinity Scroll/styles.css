@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: whitesmoke;
+  font-family: "Sofia Sans", sans-serif;
+}
+body h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  letter-spacing: 5px;
+  margin: 20px 0;
+}
+body .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+body .loader img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .image-container {
+  margin: 20px 30%;
+}
+body .image-container img {
+  width: 100%;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 900px) {
+  body h1 {
+    font-size: 2rem;
+  }
+  body .image-container {
+    margin: 15px;
+  }
+}
+@media screen and (max-width: 550px) {
+  body h1 {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
