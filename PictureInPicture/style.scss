@@ -1,0 +1,44 @@
+$font:'Roboto Mono', monospace;
+html{
+    box-sizing: border-box;
+    body{
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba($color: #9b0e0e, $alpha: 0.9);
+        .button-container{
+            border: 5px solid rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 10px;
+            min-width: 30px;
+            box-shadow: inset 0 15px 3px -10px rgba($color: #473c36, $alpha: 1.0);
+            #button{
+                cursor: pointer;
+                font-family: $font;
+                font-size: 4rem;
+                border-radius: 10px;
+                
+                border: 2px solid black;
+                outline: none;
+                color: whitesmoke;
+                text-shadow: 0 3px 5px black;
+                width: 210px;
+                height: 100px;
+                background: linear-gradient(to top,rgb(242, 91, 32), rgb(202, 71, 0));
+                box-shadow: inset 0 15px 3px -10px rgba($color: #473c36, $alpha: 1.0), 0 12px 12px  0px rgba($color: #000000, $alpha: 0.3);
+            }
+            #button:hover{
+                
+                background: linear-gradient(to bottom,rgb(242, 91, 32), rgb(202, 71, 0));
+
+
+            }
+            #button:active{
+                transform: translateY(3px);
+                box-shadow:  6px 6px  0px rgba($color: #000000, $alpha: 0.3)
+            }
+        }
+    }
+}
